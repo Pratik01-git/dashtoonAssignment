@@ -9,7 +9,6 @@ export default function StoryBoard({ prompts }) {
         const imagesArray = await Promise.all(
           prompts.map(async (prompt) => {
             try {
-              console.log(imagesArray);
               const response = await fetch(
                 "https://xdwvg9no7pefghrn.us-east-1.aws.endpoints.huggingface.cloud",
                 {
@@ -36,6 +35,8 @@ export default function StoryBoard({ prompts }) {
             }
           })
         );
+
+        console.log(imagesArray);
       } catch (error) {
         console.error(error.message);
       }
