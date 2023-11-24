@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "./Input";
 import "../App.css";
+import "../index.css";
 
 export default function Form({setPrompts}) {
   const [formValues, setFormValues] = useState([{
@@ -48,7 +49,9 @@ export default function Form({setPrompts}) {
   };
 
   return (
-    <div className="form">
+    <div className="form" style={{height:"100%"}}>
+      <div className="title">StoryBoard</div>
+      <div className="subtitle">Generate your own story!</div>
       <form onSubmit={handleSubmit}>
         <div className="story">
           {formValues.map((obj, index) => (
@@ -63,8 +66,8 @@ export default function Form({setPrompts}) {
           ))}
         </div>
         <hr/>
-        <button type="submit" className="submit-btn">
-          Submit
+        <button type="submit" className="submit">
+          Generate
         </button>
       </form>
     </div>

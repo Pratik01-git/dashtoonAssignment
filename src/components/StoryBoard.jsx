@@ -46,15 +46,15 @@ export default function StoryBoard({ prompts }) {
   }, [prompts]);
 
   return (
-    <div className='content'>
+    <div className='images'>
       <h2>Story Board</h2>
-      <div>
+      <ul className='image-gallery'>
         {images.map((image, index) => (
           <div key={index}>
-            <img src={image} alt={`Fetched Image ${index}`} />
+            <img key={index}src={image} alt={`Fetched Image ${index}`} />
           </div>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
