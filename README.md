@@ -1,3 +1,4 @@
+# Loader was not implemented due to lack of time will be fixed once the evaluation is done. Click the generate button once and wait Image will generate in some time.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
