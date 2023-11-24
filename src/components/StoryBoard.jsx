@@ -51,7 +51,6 @@ export default function StoryBoard({ prompts }) {
         {images.map((image, index) => (
           <div key={index} className='image-container'>
             <div className='loading-message'>Loading images...</div>
-            
             <img src={image} alt="" />
           </div>
         ))}
