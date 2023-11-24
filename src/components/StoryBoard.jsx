@@ -29,8 +29,6 @@ export default function StoryBoard({ prompts }) {
 
               const result = await response.blob();
               const imgUrl = URL.createObjectURL(result);
-
-              // Update the state for each image as it is fetched
               setImages((prevImages) => [...prevImages, imgUrl]);
             } catch (error) {
               console.error(`Error fetching image for prompt: ${prompt}`, error.message);
@@ -47,14 +45,14 @@ export default function StoryBoard({ prompts }) {
 
   return (
     <div className='images'>
-      <h2>Story Board</h2>
-      <ul className='image-gallery'>
+      <div className='image-gallery'>
         {images.map((image, index) => (
-          <div key={index}>
-            <img key={index}src={image} alt={`Fetched Image ${index}`} />
+          <div key={index} className='image-container'>
+            <div className='loading-message'>Loading images...</div>
+            <img src={image} alt={`Fetched Image ${index}`} />
           </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

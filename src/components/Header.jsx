@@ -6,7 +6,7 @@ export default function Header(){
         <div className='header'>
             <div className='top'></div>
             <div className='text'>
-                <h1> Dashtun Comic Generator </h1>
+                <h1> Dashtoon Comic Generator </h1>
             </div>
         </div>
     );
